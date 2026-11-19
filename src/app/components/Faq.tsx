@@ -30,11 +30,13 @@ export default function Faq() {
             <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 w-full max-w-3xl mx-auto">
                 {questions.map((question, index) => (
                     <article key={index} className={`space-y-2 py-4 ${index !== questions.length - 1 ? 'border-b border-gray-200' : ''}`}>
-                        <div className="flex items-center justify-between">
+                        <div
+                            onClick={() => setAnswerOpen(answerOpen === index ? null : index)}
+                            className="flex items-center justify-between gap-5"
+                        >
                             <span className='text-sm sm:text-lg font-medium'>{index + 1}. {question.question}</span>
                             <button
                                 type='button'
-                                onClick={() => setAnswerOpen(answerOpen === index ? null : index)}
                                 className={`transition-transform duration-300 ${answerOpen === index ? 'rotate-180' : ''}`}
                             >
                                 <ChevronDown size={18} />

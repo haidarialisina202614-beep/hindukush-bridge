@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
             <hr className="border-t border-black/15 my-8" />
             <div className="flex flex-col md:flex-row flex-wrap gap-4 items-center justify-between">
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
                     <FooterButton link="https://play.google.com/store/apps/details?id=com.routerManager.hindukushbridge&hl=en" icon="/google-play.svg" des="Get it on" name="google play" />
                     <FooterButton link="https://apps.apple.com/us/app/hkb-ict/id6757099439" icon="/app-store.svg" des="Download on the" name="app store" />
                     <FooterButton link="https://www.movieland.com" icon="/movieland.webp" des="Free movies on" name="movieland" />

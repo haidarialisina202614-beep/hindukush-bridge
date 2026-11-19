@@ -153,16 +153,76 @@ export default function Header() {
                             </button>
                         </div>
                         <div className="flex flex-col gap-1">
-                            {navlinks.map((nav, index) => (
-                                <Link
-                                    key={index}
-                                    href={nav.link}
-                                    onClick={() => setMenuOpen(false)}
-                                    className={`bg-white rounded-md w-full font-medium px-3 p-2.5 text-sm ${pathname === nav.link ? 'text-[#007BE3]' : 'text-gray-600'}`}
+                            {navlinks.map((nav, index) => {
+                                if (nav.label === 'Packages') {
+                                    return (
+                                        <li
+                                            key={index}
+                                            onMouseEnter={() => setOpen(true)}
+                                            onMouseLeave={() => setOpen(false)}
+                                            onClick={() => setOpen(!open)}
+                                            className="list-none w-full"
+                                        >
+                                            <div
+                                                className={`bg-white rounded-md w-full font-medium px-3 p-2.5 text-sm text-gray-600 flex items-center justify-between`}
+                                            >
+                                                <p>{nav.label}</p>
+                                                <ChevronDown size={14} className={`transform ${open ? 'rotate-180' : ''} transition`} />
+                                            </div>
+                                            {open && (
+                                                <div className="bg-white px-2">
+                                                    {['Kabul', 'Herat', 'Mazar', 'Jawzjan'].map((pkg) => (
+                                                        <button
+                                                            key={pkg}
+                                                            type="button"
+                                                            onClick={() => setOpen(false)}
+                                                            className="p-2 px-4 w-full text-left text-black/60 hover:bg-gray-100 rounded-lg cursor-pointer transition duration-200 font-medium text-sm"
+                                                        >
+                                                            {pkg}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </li>
+                                    )
+                                } return (
+                                    <Link
+                                        key={index}
+                                        href={nav.link}
+                                        onClick={() => setMenuOpen(false)}
+                                        className={`bg-white rounded-md w-full font-medium px-3 p-2.5 text-sm ${pathname === nav.link ? 'text-[#007BE3]' : 'text-gray-600 hover:text-gray-800 transition'}`}
+                                    >
+                                        {nav.label}
+                                    </Link>
+                                )
+
+                            })}
+                            <div>
+                                <div
+                                    onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                                    className="px-3 p-2.5 bg-white text-gray-600 cursor-pointer flex items-center justify-between gap-2 rounded-md"
                                 >
-                                    {nav.label}
-                                </Link>
-                            ))}
+                                    <p className="text-sm font-medium">Language ({selectedLanguage})</p>
+                                    <ChevronDown size={14} className={`transform ${isLanguageOpen ? 'rotate-180' : ''} transition`} />
+                                </div>
+
+                                {isLanguageOpen && (
+                                    <div className="px-3">
+                                        {['فارسی', 'English'].map((language) => (
+                                            <div
+                                                key={language}
+                                                onClick={() => {
+                                                    setIsLanguageOpen(false);
+                                                    setSelectedLanguage(language);
+                                                }}
+                                                className={`px-3 p-2 rounded-md cursor-pointer ${selectedLanguage === language ? 'text-[#007BE3]' : 'text-gray-600 hover:bg-gray-100 transition'}`}
+                                            >
+                                                {language}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

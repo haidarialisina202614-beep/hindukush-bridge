@@ -22,7 +22,7 @@ export default function FooterButton({ icon, des, name, link }: ButtonProps) {
             />
             <div className='-space-y-1'>
                 <p className='text-[9px]'>{des}</p>
-                <span className='tracking-widest text-sm font-bold capitalize'>{name}</span>
+                <span className='tracking-wider text-sm font-semibold capitalize'>{name}</span>
             </div>
         </Link>
     )

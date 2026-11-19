@@ -21,7 +21,7 @@ export default function Faq() {
     ]
 
     return (
-        <section className='flex flex-col items-center px-5 gap-15 py-15 sm:py-15'>
+        <section id='faq' className='flex flex-col items-center px-5 gap-15 py-15 sm:py-15'>
             <div className="space-y-2 text-center">
                 <h2 className='text-2xl md:text-4xl capitalize font-bold'>ask questions</h2>
                 <p className="text-gray-600 text-base sm:text-lg capitalize">frequently asked questions</p>

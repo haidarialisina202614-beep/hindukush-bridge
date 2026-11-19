@@ -23,6 +23,7 @@ export default function Sponsors() {
                 gradientWidth={100}
                 pauseOnHover
                 pauseOnClick
+                gradientColor="#F9F9F9"
 
                 className='max-w-4xl mx-auto'
             >

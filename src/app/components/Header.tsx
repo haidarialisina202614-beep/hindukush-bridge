@@ -124,7 +124,7 @@ export default function Header() {
                         )}
                     </div>
 
-                    <FillButton link="https://www.movieland.com" name="Movieland" padding={1.5} px={6} resPx={6} radius="md" />
+                    <FillButton link="https://www.movieland.af" name="Movieland" padding={1.5} px={6} resPx={6} radius="md" />
 
                 </div>
             </nav>

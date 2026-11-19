@@ -7,8 +7,8 @@ export default function Footer() {
 
     const links = [
         { label: 'Services', link: '/services' },
-        { label: 'About us', link: '/services' },
-        { label: 'Contact us', link: '/services' },
+        { label: 'About us', link: '/about-us' },
+        { label: 'Contact us', link: '/contact-us' },
         { label: 'FAQs', link: '#faq' }
     ]
 

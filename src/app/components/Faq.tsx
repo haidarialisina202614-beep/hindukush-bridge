@@ -32,7 +32,7 @@ export default function Faq() {
                     <article key={index} className={`space-y-2 py-4 ${index !== questions.length - 1 ? 'border-b border-gray-200' : ''}`}>
                         <div
                             onClick={() => setAnswerOpen(answerOpen === index ? null : index)}
-                            className="flex items-start justify-between gap-5"
+                            className="flex justify-between gap-5"
                         >
                             <span className='text-sm sm:text-lg font-medium'>{index + 1}. {question.question}?</span>
                             <button

@@ -6,7 +6,7 @@ export default function Services() {
     <main>
       <section className='flex flex-col gap-6 justify-center px-5 md:px-8 lg:px-15 min-h-[250px] md:min-h-[400px]'>
         <h1 className='text-4xl md:text-6xl font-bold tracking-wide leading-tight capitalize'>more <br /> features <br /> with application</h1>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-2 md:gap-4 w-50 md:w-full">
           <Link
             href={'https://play.google.com/store/apps/details?id=com.routerManager.hindukushbridge&hl=en'}
             className='p-2 py-1 rounded-md border border-black/20 flex items-center gap-2'

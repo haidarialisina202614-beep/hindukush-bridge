@@ -11,11 +11,11 @@ export default function Faq() {
             answer: 'You can easily subscribe by visiting our website, filling out the registration form, and selecting the service plan that best suits your needs. Our team will contact you to complete the setup.'
         },
         {
-            question: 'What service does Hindukush Bridge provide?',
+            question: 'What service does Hindukush Bridge provide',
             answer: 'Hindukush Bridge provides high-speed internet services, secure networking solutions, and 24/7 support for residential and business customers.'
         },
         {
-            question: 'Do you offer customer support?',
+            question: 'Do you offer customer support',
             answer: 'Yes, we offer 24/7 customer support via phone, email, and live chat to help you with any technical or service-related inquiries.'
         },
     ]
@@ -32,9 +32,9 @@ export default function Faq() {
                     <article key={index} className={`space-y-2 py-4 ${index !== questions.length - 1 ? 'border-b border-gray-200' : ''}`}>
                         <div
                             onClick={() => setAnswerOpen(answerOpen === index ? null : index)}
-                            className="flex items-center justify-between gap-5"
+                            className="flex justify-between gap-5"
                         >
-                            <span className='text-sm sm:text-lg font-medium'>{index + 1}. {question.question}</span>
+                            <span className='text-sm sm:text-lg font-medium'>{index + 1}. {question.question}?</span>
                             <button
                                 type='button'
                                 className={`transition-transform duration-300 ${answerOpen === index ? 'rotate-180' : ''}`}
